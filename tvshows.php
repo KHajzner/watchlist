@@ -8,13 +8,13 @@ include "index.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Watch List</title>
+    <title>TV Show List</title>
     <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 
 <body>
 
-	<h1 class="title is-1">TV Shows</h1>
+	<h1 class="title is-1">TV Show List</h1>
     <div class="bar">
         <a href="#watching">Watching</a>
         <a href="#towatch">Plan To Watch</a>
@@ -28,7 +28,7 @@ include "index.php";
 				<div id="allMovies">
                 <h2 id="watching">Watching</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Year</th>
                         <th style="width:10%">Episodes</th>
@@ -46,11 +46,12 @@ include "index.php";
 					$watching = $mysqli->query($q1);
 					if (mysqli_num_rows($watching)>0){
 						while($row = mysqli_fetch_array($watching)){?>
-                        <tr>
+                        <tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['StartYear'];?></td>
- <td><?php echo $row['CurrentEpisode'];?>/<?php echo $row['Episodes'];?><a href="addepisode.php?id=<?php echo $row['ID']; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+ <td><?php echo $row['CurrentEpisode'];?>/<?php echo $row['Episodes'];?><a href="addepisode.php?id=<?php echo $row['ID']; ?>">&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 </svg>
 </a></td>
                             <td><?php echo $row['Season'];?></td>
@@ -69,7 +70,7 @@ include "index.php";
                 </table>
                  <h2 id="towatch">Plan To Watch</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Year</th>
                         <th style="width:10%">Episodes</th>
@@ -86,7 +87,7 @@ include "index.php";
 					$plantowatch = $mysqli->query($q2);
 					if (mysqli_num_rows($plantowatch)>0){
 						while($row = mysqli_fetch_array($plantowatch)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['StartYear'];?></td>
                             <td><?php echo $row['CurrentEpisode'];?>/<?php echo $row['Episodes'];?></td>
@@ -105,7 +106,7 @@ include "index.php";
                 </table>
                 <h2 id="completed">Completed</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Year</th>
                         <th style="width:10%">Episodes</th>
@@ -123,7 +124,7 @@ include "index.php";
 					$completed = $mysqli->query($q3);
 					if (mysqli_num_rows($completed)>0){
 						while($row = mysqli_fetch_array($completed)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['StartYear'];?></td>
                             <td><?php echo $row['Episodes'];?>/<?php echo $row['Episodes'];?></td>
@@ -142,7 +143,7 @@ include "index.php";
                 </table>
                 <h2 id="abandoned">Abandoned</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Year</th>
                         <th style="width:10%">Episodes</th>
@@ -159,11 +160,12 @@ include "index.php";
 					$abandoned = $mysqli->query($q4);
 					if (mysqli_num_rows($abandoned)>0){
 						while($row = mysqli_fetch_array($abandoned)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['StartYear'];?></td>
-                            <td><?php echo $row['CurrentEpisode'];?>/<?php echo $row['Episodes'];?><a href="addepisode.php?id=<?php echo $row['ID']; ?>"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
-  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+                            <td><?php echo $row['CurrentEpisode'];?>/<?php echo $row['Episodes'];?><a href="addepisode.php?id=<?php echo $row['ID']; ?>">&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
 </svg>
 </a></td>
                             <td><?php echo $row['Season'];?></td>
@@ -183,7 +185,7 @@ include "index.php";
 			</div>
 				<div class="column right">
                 <h2>Filter By</h2>
-
+<div class="filter">
 			<form action="filtertvshow.php" method="GET">
 				<label for="title">Title:</label><br>
 				<input type="text" name="title" required value="<?php if(isset($_GET['title'])){echo $_GET['title'];}?>" placeholder="TV Show Title">
@@ -194,9 +196,9 @@ include "index.php";
 					<label for="year">Release Year:</label><br>
 				<input type="number" name="year" required value="<?php if(isset($_GET['year'])){echo $_GET['year'];}?>" placeholder="Release Year"><br>
 				<input type="radio" name="time" value="after" required>
-					<label for="genre1">After</label><br>
+					<label for="genre1">After</label>&nbsp;
 				<input type="radio" name="time" value="before">
-					<label for="genre2">Before</label><br>
+					<label for="genre2">Before</label>&nbsp;
 				<input type="radio" name="time" value="during">
 					<label for="genre3">During</label><br>
 				<button type="submit">Search</button><br>
@@ -206,11 +208,11 @@ include "index.php";
 				<label for="allep">Total Episodes:</label><br>
 				<input type="number" name="allep" required value="<?php if(isset($_GET['allep'])){echo $_GET['allep'];}?>" placeholder="Total Episodes"><br>
 				<input type="radio" name="long" value="longer" required>
-					<label for="genre1">Longer</label><br>
+					<label for="genre1">Longer</label>&nbsp;
 				<input type="radio" name="long" value="shorter">
-					<label for="genre2">Shorter</label><br>
+					<label for="genre2">Shorter</label>&nbsp;
 				<input type="radio" name="long" value="exact">
-					<label for="genre3">Exact</label><br>
+					<label for="genre3">Exact</label>&nbsp;
 				<button type="submit">Search</button><br>
 				</form>
 			<form action="filtertvshow.php" method="GET">
@@ -265,15 +267,15 @@ include "index.php";
 				<label for="rating">Rating:</label><br>
 				<input type="number" name="rating" min="0" max="10" required value="<?php if(isset($_GET['rating'])){echo $_GET['rating'];}?>" placeholder="Rating"><br>
 				<input type="radio" name="qual" value="better" required>
-					<label for="genre1">Better</label><br>
+					<label for="genre1">Better</label>&nbsp;
 				<input type="radio" name="qual" value="worse">
-					<label for="genre2">Worse</label><br>
+					<label for="genre2">Worse</label>&nbsp;
 				<input type="radio" name="qual" value="exact">
 					<label for="genre3">Exact</label><br>
 				<button type="submit">Search</button><br>
 			</form>
 
-
+</div>
 				</div>
 		</div>
 
