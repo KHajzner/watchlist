@@ -39,7 +39,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-					<tr><td colspan="8"><hr class="titleline"></td></tr>
+					<tr><td colspan="9"><hr class="titleline"></td></tr>
 
 				<?php
 					include "database.php";
@@ -62,7 +62,7 @@ include "index.php";
 							<td><a href="edittvshow.php?id=<?php echo $row['ID'];?>">Edit</a></td>
 							<td><a href="deletetvshow.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
-						<tr><td colspan="8"><hr class="entryline"></td></tr>
+						<tr><td colspan="9"><hr class="entryline"></td></tr>
 
 						<?php
 						}
@@ -83,7 +83,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-					<tr><td colspan="8"><hr class="titleline"></td></tr>
+					<tr><td colspan="9"><hr class="titleline"></td></tr>
 				<?php
 								  include "database.php";
 					$q2 = "SELECT * FROM TVShows WHERE watchstatus='PlanToWatch' ORDER BY Title, Season ASC";
@@ -101,7 +101,7 @@ include "index.php";
 							<td><a href="edittvshow.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletetvshow.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this tv show?');">Delete</a></td>
                         </tr>
-						<tr><td colspan="8"><hr class="entryline"></td></tr>
+						<tr><td colspan="9"><hr class="entryline"></td></tr>
 				<?php
 						}
 				}
@@ -121,7 +121,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-					<tr><td colspan="8"><hr class="titleline"></td></tr>
+					<tr><td colspan="9"><hr class="titleline"></td></tr>
 
                   <?php
 				  include "database.php";
@@ -140,7 +140,7 @@ include "index.php";
 							<td><a href="edittvshow.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletetvshow.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this tv show?');">Delete</a></td>
                         </tr>
-						<tr><td colspan="8"><hr class="entryline"></td></tr>
+						<tr><td colspan="9"><hr class="entryline"></td></tr>
 			<?php
 						}
 				}
@@ -160,7 +160,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-					<tr><td colspan="8"><hr class="titleline"></td></tr>
+					<tr><td colspan="9"><hr class="titleline"></td></tr>
 					<?php
 				  include "database.php";
 					$q4 = "SELECT * FROM TVShows WHERE watchstatus='Abandoned' ORDER BY Title, Season ASC";
@@ -182,7 +182,7 @@ include "index.php";
 							<td><a href="edittvshow.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletetvshow.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this tv show?');">Delete</a></td>
                         </tr>
-						<tr><td colspan="8"><hr class="entryline"></td></tr>
+						<tr><td colspan="9"><hr class="entryline"></td></tr>
 			<?php
 						}
 				}

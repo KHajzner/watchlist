@@ -30,7 +30,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-
+					<tr><td colspan="8"><hr class="titleline"></td></tr>
 				<?php
 					include "database.php";
 					
@@ -149,6 +149,7 @@ include "index.php";
 									<td><a href="editmovie.php?id=<?php echo $movies['ID']; ?>">Edit</a></td>
 									<td><a href="deletemovie.php?id=<?php echo $movies['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
 								</tr>
+													<tr><td colspan="8"><hr class="entryline"></td></tr>
 								<?php
 							}
 						}
