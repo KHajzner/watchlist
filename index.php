@@ -11,12 +11,10 @@
 <body>
 <section class="hero is-primary is-fullheight">
 
-    <div class="hero-head">
+    <div class="container-nav">
         <nav class="navbar">
-            <div class="container">
-                <div class="navbar-menu">
-                    <div class="navbar-end">
-                        <a href="index.php" class="navbar-item">
+
+                        <a href="main.php" class="navbar-item">
                             Home
                         </a>
                         <a href="movies.php" class="navbar-item">
@@ -27,10 +25,11 @@
                         </a>
 						<a href="contact.php" class="navbar-item">
                             Contact
+                        </a>						
+						<a href="guide.php" class="navbar-item">
+                            Guide
                         </a>
-                    </div>
-                </div>
-            </div>
+
         </nav>
     </div>
 </section>
