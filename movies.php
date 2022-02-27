@@ -38,7 +38,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
-
+					<tr><td colspan="8"><hr class="titleline"></td></tr>
 				<?php
 					include "database.php";
 					$q1 = "SELECT * FROM Movies WHERE watchstatus='Watching' ORDER BY Title ASC";
@@ -55,6 +55,7 @@ include "index.php";
 							<td><a href="editmovie.php?id=<?php echo $row['ID'];?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
 						</tr>
+						<tr><td colspan="8"><hr class="entryline"></td></tr>
 
 						<?php
 						}
@@ -74,6 +75,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
+					<tr><td colspan="8"><hr class="titleline"></td></tr>
 				<?php
 								  include "database.php";
 					$q2 = "SELECT * FROM Movies WHERE watchstatus='PlanToWatch' ORDER BY Title ASC";
@@ -90,6 +92,7 @@ include "index.php";
 							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
+												<tr><td colspan="8"><hr class="entryline"></td></tr>
 				<?php
 						}
 				}
@@ -109,6 +112,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
+					<tr><td colspan="8"><hr class="titleline"></td></tr>
 				</thead>
 				<tbody>
 
@@ -128,6 +132,7 @@ include "index.php";
 							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
+						<tr><td colspan="8"><hr class="entryline"></td></tr>
 			<?php
 						}
 				}
@@ -147,6 +152,7 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
+										<tr><td colspan="8"><hr class="titleline"></td></tr>
 					<?php
 				  include "database.php";
 					$q4 = "SELECT * FROM Movies WHERE watchstatus='Abandoned' ORDER BY Title ASC";
@@ -163,6 +169,7 @@ include "index.php";
 							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
+												<tr><td colspan="8"><hr class="entryline"></td></tr>
 			<?php
 						}
 				}
@@ -224,26 +231,32 @@ include "index.php";
 				
 			<form action="filtermovie.php" method="GET">
 				<label for="genre">Genre:</label><br>
+	<div class="choice"> 
 				<input type="radio" id="Romance" name="genre" value="Romance" required>
-					<label for="Romance">Romance</label><br>
+					<label for="Romance">Romance</label>
 				<input type="radio" id="Comedy" name="genre" value="Comedy">
-					<label for="Comedy">Comedy</label><br>
+					<label for="Comedy">Comedy</label>
 				<input type="radio" id="Horror" name="genre" value="Horror">
-					<label for="Horror">Horror</label><br>
+					<label for="Horror">Horror</label>
 				<input type="radio" id="Action" name="genre" value="Action">
 					<label for="Action">Action</label><br>
 				<input type="radio" id="Thriller" name="genre" value="Thriller">
-					<label for="Thriller">Thriller</label><br>
-				<input type="radio" id="Drama" name="genre" value="Drama">
-					<label for="Drama">Drama</label><br>
+					<label for="Thriller">Thriller</label>
+				<input type="radio" id="Animated" name="genre" value="Animated">
+					<label for="Animated">Animated</label>
 				<input type="radio" id="Fantasy" name="genre" value="Fantasy">
-					<label for="Fantasy">Fantasy</label><br>
+					<label for="Fantasy">Fantasy</label>
 				<input type="radio" id="Mystery" name="genre" value="Mystery">
 					<label for="Mystery">Mystery</label><br>
 				<input type="radio" id="Documentary" name="genre" value="Documentary">
-					<label for="Documentary">Documentary</label><br>
+					<label for="Documentary">Documentary</label>
 				<input type="radio" id="Sci-Fi" name="genre" value="Sci-Fi">
-					<label for="Sci-Fi">Sci-Fi</label><br>
+					<label for="Sci-Fi">Sci-Fi</label>
+				<input type="radio" id="Drama" name="genre" value="Drama">
+					<label for="Drama">Drama</label>
+				<input type="radio" id="Musical" name="genre" value="Musical">
+					<label for="Musical">Musical</label><br>
+					</div>
 				<button type="submit">Search</button><br>
 				</form>
 				
