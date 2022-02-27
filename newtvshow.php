@@ -5,6 +5,9 @@
 <?php
 include "index.php";
 ?>
+
+<h3>Add New TV Show</h3>
+<div class="square" id="form">
 <form action="addtvshow.php">
   <label for="tvtitle">Title:</label><br>
 	<input type="text" id="tvtitle" name="tvtitle"><br>
@@ -27,21 +30,21 @@ include "index.php";
 	<input type="text" id="tvageRestriction" name="tvageRestriction"><br>
 				<label for="genre">Genre:</label><br>
 				<input type="radio" id="Romance" name="tvgenre" value="Romance" required>
-					<label for="Romance">Romance</label><br>
+					<label for="Romance">Romance</label>
 				<input type="radio" id="Comedy" name="tvgenre" value="Comedy">
 					<label for="Comedy">Comedy</label><br>
 				<input type="radio" id="Horror" name="tvgenre" value="Horror">
 					<label for="Horror">Horror</label><br>
 				<input type="radio" id="Action" name="tvgenre" value="Action">
-					<label for="Action">Action</label><br>
+					<label for="Action">Action</label>
 				<input type="radio" id="Thriller" name="tvgenre" value="Thriller">
-					<label for="Thriller">Thriller</label><br>
+					<label for="Thriller">Thriller</label>
 				<input type="radio" id="Drama" name="tvgenre" value="Drama">
 					<label for="Drama">Drama</label><br>
 				<input type="radio" id="Fantasy" name="tvgenre" value="Fantasy">
-					<label for="Fantasy">Fantasy</label><br>
+					<label for="Fantasy">Fantasy</label>
 				<input type="radio" id="Mystery" name="tvgenre" value="Mystery">
-					<label for="Mystery">Mystery</label><br>
+					<label for="Mystery">Mystery</label>
 				<input type="radio" id="Documentary" name="tvgenre" value="Documentary">
 					<label for="Documentary">Documentary</label><br>
 				<input type="radio" id="Sci-Fi" name="tvgenre" value="Sci-Fi">
@@ -51,5 +54,7 @@ include "index.php";
   <input type="submit" value="Submit">
   
 </form>
+
+</div>
 </body>
 </html>
