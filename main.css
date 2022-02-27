@@ -5,42 +5,52 @@ html {
 body{
     color: #C5C6C7;
     background-color: #0B0c10;
+	font-family: Calibri, monospace;
 }
 a:link{
-    color: #66FCF1;
+    color: #d4a42e;
     font-size: 20px;
     text-decoration: none;
 }
 a:visited{
-    color:#66FCF1;
+    color:#d4a42e;
 }
 a:hover{
-    color: #45A29E;
+    color: #ad831a;
     transition: 0.5s;
 }
 .box{
-    margin-top: 30px;
+    margin-top: 15px;
+}
+h1{
+	text-align: center;
+	color: #C5C6C7;
+	margin: 20px auto 20px auto;
+	display: table;
+	border-bottom: 2px solid #f57aeb;
+	font-size: 50px;
 }
 h2{
-    background-color: rgba(78, 230, 218, 0.15);
+    background-color: rgba(11, 12, 16, 0.7);
     font-weight: normal;
-    color: #66FCF1;
-    text-align: left;
-    border-top-right-radius: 50px;
-    border-left: 5px solid #0B0c10;
+    color: #cedbf5;
+    text-align: center;
     display: table;
-    padding: 5px 30px 5px 5px;
+    padding: 8px;
+	padding-bottom: 5px;
+	border-radius: 10px 10px 0 0;
     text-transform: uppercase;
     font-family: Calibri, monospace;
 }
 .column {
-    border-top: 3px solid #66FCF1;
+    border-top: 3px solid #d4a42e;
     float: left;
-    background: #1F2833 ;
-    border-radius: 15px;
+    background: #2c3545 ;
+
     padding: 10px;
     margin-left: 20px;
 }
+
 .left {
   width: 70%;
 }
@@ -53,15 +63,15 @@ h2{
   display: table;
   clear: both;
 }
-table{
-    width: 100%;
-    text-align: left;
-}
 /* Nav Bar */
+.hero{
+	width: 100%;
+}
 .navbar{
     background-color: rgba(31, 40, 51, 0.3);
-    padding: 10px;
     text-align: center;
+	padding: 10px 0 10px 0;
+	width: 100%;
 }
 .navbar-item{
     margin-right: 20px;
@@ -70,9 +80,11 @@ table{
     font-family: Calibri, monospace;
 }
 
+
 /*list bar*/
 .bar{
     display: table;
+	width: 100%;
     background-color: #1F2833;
     text-align: center;
     text-decoration: none;
@@ -80,30 +92,137 @@ table{
     top: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
     font-family: Calibri, monospace;
     border-radius: 2px;
 }
 .bar a{
     margin:10px;
+	color: #d4a42e;
 }
-.contact{
-	border-top: 3px solid #66FCF1;
+
+/*right column*/
+.filter{
+	background-color: rgba(11, 12, 16, 0.5);
+    margin-top: -20px;
+	padding: 10px;
+    text-align: left;
+	border-top: 2px solid #fa8cf1;
+}
+
+/* table */
+table{
+	background-color: rgba(11, 12, 16, 0.5);
+	border-top: 2px solid #fa8cf1;
+    margin-top: -20px;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+}
+
+tr.titles{
+	font-size: 17px;
+	text-transform: uppercase;	
+}
+
+.entry a{
+	font-size:15px;
+	font-weight:lighter;
+	text-transform: uppercase;
+}
+
+.square{
+	border-top: 3px solid #d4a42e;
     background: #1F2833 ;
-    border-radius: 15px;
     padding: 10px;
 	width: 50%;
 	margin: 20px auto 0 auto;	
 }
-table {
-  background-color: rgba(11, 12, 16, 0.5);
-    margin-top: -20px;
-    padding: 5px;
+/*forms*/
+h3{
+    background-color: rgba(31, 40, 51, 0.5);
+    font-weight: normal;
+    color: #cedbf5;
+    text-align: center;
+	margin:  30px auto 0 auto;
+	font-size: 25px;
+	width: 50%;
+    padding: 10px;
+	border-radius: 10px 10px 0 0;
+    text-transform: uppercase;
+    font-family: Calibri, monospace;
 }
 
-input{
-	background-color: rgba(11, 12, 16, 0.5);
+div#form{
+	margin-top: 0px;
+	text-align: center;
 }
+
+.formlabel{
+	font-size: 22px;
+	border-bottom: 2px solid #f57aeb;
+}
+.choice{
+	text-align: center;
+	width: 50%;
+	margin: 0 auto 0 auto;
+}
+select{
+	background-color: rgba(11, 12, 16, 0.40);
+	font-size: 15px;
+	color: #C5C6C7;
+	padding: 5px 10px 5px 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border: 2px solid  rgba(11, 12, 16, 0.5);
+	border-radius: 4px;
+		width: 250px;
+}
+input{
+	background-color: rgba(11, 12, 16, 0.40);
+	font-size: 15px;
+	color: #C5C6C7;
+	padding: 5px 10px 5px 10px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+	border: 2px solid  rgba(11, 12, 16, 0.5);
+	border-radius: 4px;
+}
+input:focus{
+	border: 2px solid rgba(11, 12, 16, 0.3);
+	outline: none;
+}
+input[type=text]{
+	width: 250px;
+}
+input[type=number]{
+	width: 250px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*scroll bar*/
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+ background-color: #1F2833;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #C5C6C7;
+}
+body::-webkit-scrollbar-thumb:hover{
+	background-color: rgba(197, 198, 199, 0.5);
+	transition: 1s;
+}
+ 
 
 footer a{
     color: #3c4157;
