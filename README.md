@@ -5,7 +5,7 @@ There are also options for movies/tvshows you are watching or have abandoned. <b
 Lets you filter database based on movie's/tv show's attributes. 
 
 
-Originally run using USBWebserver. 
+Originally run using USBWebserver with externally created database. <br>
 If you want to run the program yourself and have any questions, don't hesitate to contact me.
 
 ## Future plans:
