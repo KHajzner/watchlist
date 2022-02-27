@@ -8,13 +8,13 @@ include "index.php";
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Watch List</title>
+    <title>Movie List</title>
     <link rel="stylesheet" href="main.css" type="text/css"/>
 </head>
 
 <body>
 
-	<h1 class="title is-1">Movie</h1>
+	<h1 class="title is-1">Movie List</h1>
     <div class="bar">
         <a href="#watching">Watching</a>
         <a href="#towatch">Plan To Watch</a>
@@ -28,7 +28,7 @@ include "index.php";
 				<div id="allMovies">
                 <h2 id="watching">Watching</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
                         <th style="width:10%">Runtime</th>
@@ -45,16 +45,16 @@ include "index.php";
 					$watching = $mysqli->query($q1);
 					if (mysqli_num_rows($watching)>0){
 						while($row = mysqli_fetch_array($watching)){?>
-                        <tr>
+                        <tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['Year'];?></td>
-                            <td><?php echo $row['Runtime'];?></td>
+                            <td><?php echo $row['Runtime'];?> min</td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
                             <td><?php echo $row['Rating'];?>/10</td>
 							<td><a href="editmovie.php?id=<?php echo $row['ID'];?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
-                        </tr>
+						</tr>
 
 						<?php
 						}
@@ -64,7 +64,7 @@ include "index.php";
                 </table>
                  <h2 id="towatch">Plan To Watch</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
                         <th style="width:10%">Runtime</th>
@@ -80,10 +80,10 @@ include "index.php";
 					$plantowatch = $mysqli->query($q2);
 					if (mysqli_num_rows($plantowatch)>0){
 						while($row = mysqli_fetch_array($plantowatch)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['Year'];?></td>
-                            <td><?php echo $row['Runtime'];?></td>
+                            <td><?php echo $row['Runtime'];?> min</td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
                             <td><?php echo $row['Rating'];?>/10</td>
@@ -98,7 +98,8 @@ include "index.php";
                 </table>
                 <h2 id="completed">Completed</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+				<thead>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
                         <th style="width:10%">Runtime</th>
@@ -108,6 +109,8 @@ include "index.php";
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
+				</thead>
+				<tbody>
 
                   <?php
 				  include "database.php";
@@ -115,10 +118,10 @@ include "index.php";
 					$completed = $mysqli->query($q3);
 					if (mysqli_num_rows($completed)>0){
 						while($row = mysqli_fetch_array($completed)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['Year'];?></td>
-                            <td><?php echo $row['Runtime'];?></td>
+                            <td><?php echo $row['Runtime'];?> min</td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
                             <td><?php echo $row['Rating'];?>/10</td>
@@ -130,10 +133,11 @@ include "index.php";
 				}
 				$mysqli->close();
 				?>
+				</tbody>
                 </table>
                 <h2 id="abandoned">Abandoned</h2>
                 <table style="width:100%" class="movies">
-                    <tr>
+                    <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
                         <th style="width:10%">Runtime</th>
@@ -149,10 +153,10 @@ include "index.php";
 					$abandoned = $mysqli->query($q4);
 					if (mysqli_num_rows($abandoned)>0){
 						while($row = mysqli_fetch_array($abandoned)){?>
-						<tr>
+						<tr class="entry">
                             <td><?php echo $row['Title'];?></td>
                             <td><?php echo $row['Year'];?></td>
-                            <td><?php echo $row['Runtime'];?></td>
+                            <td><?php echo $row['Runtime'];?> min</td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
                             <td><?php echo $row['Rating'];?>/10</td>
@@ -169,7 +173,7 @@ include "index.php";
 			</div>
 				<div class="column right">
                 <h2>Filter By</h2>
-
+<div class="filter">
 			<form action="filtermovie.php" method="GET">
 				<label for="title">Title:</label><br>
 				<input type="text" name="title" required value="<?php if(isset($_GET['title'])){echo $_GET['title'];}?>" placeholder="Movie Title">
@@ -180,9 +184,9 @@ include "index.php";
 					<label for="year">Release Year:</label><br>
 				<input type="number" name="year" required value="<?php if(isset($_GET['year'])){echo $_GET['year'];}?>" placeholder="Release Year"><br>
 				<input type="radio" name="time" value="after" required>
-					<label for="genre1">After</label><br>
+					<label for="genre1">After</label>&nbsp;
 				<input type="radio" name="time" value="before">
-					<label for="genre2">Before</label><br>
+					<label for="genre2">Before</label>&nbsp;
 				<input type="radio" name="time" value="during">
 					<label for="genre3">During</label><br>
 				<button type="submit">Search</button><br>
@@ -192,9 +196,9 @@ include "index.php";
 				<label for="runtime">Runtime (in minutes):</label><br>
 				<input type="number" name="runtime" required value="<?php if(isset($_GET['runtime'])){echo $_GET['runtime'];}?>" placeholder="Runtime"><br>
 				<input type="radio" name="long" value="longer" required>
-					<label for="genre1">Longer</label><br>
+					<label for="genre1">Longer</label>&nbsp;
 				<input type="radio" name="long" value="shorter">
-					<label for="genre2">Shorter</label><br>
+					<label for="genre2">Shorter</label>&nbsp;
 				<input type="radio" name="long" value="exact">
 					<label for="genre3">Exact</label><br>
 				<button type="submit">Search</button><br>
@@ -247,15 +251,15 @@ include "index.php";
 				<label for="rating">Rating:</label><br>
 				<input type="number" name="rating" min="0" max="10" required value="<?php if(isset($_GET['rating'])){echo $_GET['rating'];}?>" placeholder="Rating"><br>
 				<input type="radio" name="qual" value="better" required>
-					<label for="genre1">Better</label><br>
+					<label for="genre1">Better</label>&nbsp;
 				<input type="radio" name="qual" value="worse">
-					<label for="genre2">Worse</label><br>
+					<label for="genre2">Worse</label>&nbsp;
 				<input type="radio" name="qual" value="exact">
 					<label for="genre3">Exact</label><br>
 				<button type="submit">Search</button><br>
 			</form>
 
-
+</div>
 				</div>
 		</div>
 	</body>
