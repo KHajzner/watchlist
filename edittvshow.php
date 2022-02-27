@@ -10,22 +10,24 @@
 <title>Edit TV Show</title>
 </head>
 <body>
-	<h2>Edit</h2>
+<h3>Edit TV Show</h3>
+<div class="square" id="form">
 	<form method="POST" action="updatetvshow.php?id=<?php echo $id; ?>">
-		<label>Title</label><br><input type="text" value="<?php echo $row['Title']; ?>" name="tvtitle"><br>
-		<label>Year</label><br><input type="number" value="<?php echo $row['StartYear']; ?>" name="tvyear"><br>
-		<label>Current Episode:</label><br><input type="number" value="<?php echo $row['CurrentEpisode']; ?>" name="tvcep"><br>
-		<label>Episodes:</label><br><input type="number" value="<?php echo $row['Episodes']; ?>" name="tvallep"><br>
-		<label>Season:</label><br><input type="number" value="<?php echo $row['Season']; ?>" name="tvseason"><br>
-		<label for="watchStatus">Watch Status:</label><br>
+		<label class="formlabel">Title</label><br><input type="text" value="<?php echo $row['Title']; ?>" name="tvtitle"><br>
+		<label class="formlabel">Year</label><br><input type="number" value="<?php echo $row['StartYear']; ?>" name="tvyear"><br>
+		<label class="formlabel">Current Episode:</label><br><input type="number" value="<?php echo $row['CurrentEpisode']; ?>" name="tvcep"><br>
+		<label class="formlabel">Episodes:</label><br><input type="number" value="<?php echo $row['Episodes']; ?>" name="tvallep"><br>
+		<label class="formlabel">Season:</label><br><input type="number" value="<?php echo $row['Season']; ?>" name="tvseason"><br>
+		<label for="watchStatus" class="formlabel">Watch Status:</label><br>
 		<select id="watchStatus" name="tvwatchStatus">
 			<option value="completed">Completed</option>
 			<option value="watching">Watching</option>
 			<option value="abandoned">Abandoned</option>
 			<option value="planToWatch">Plan to Watch</option><br>
 		</select><br>
-		<label>Age Restriction</label><br><input type="text" name="tvageRestriction"value="<?php echo $row['Restrictions']; ?>"><br>
-					<label for="genre">Genre:</label><br>
+		<label class="formlabel">Age Restriction</label><br><input type="text" name="tvageRestriction"value="<?php echo $row['Restrictions']; ?>"><br>
+					<label for="genre" class="formlabel">Genre:</label><br>
+										<div class="choice"> 
 				<input type="radio" id="Romance" name="tvgenre" value="Romance" required>
 					<label for="Romance">Romance</label><br>
 				<input type="radio" id="Comedy" name="tvgenre" value="Comedy">
@@ -35,20 +37,26 @@
 				<input type="radio" id="Action" name="tvgenre" value="Action">
 					<label for="Action">Action</label><br>
 				<input type="radio" id="Thriller" name="tvgenre" value="Thriller">
-					<label for="Thriller">Thriller</label><br>
-				<input type="radio" id="Drama" name="tvgenre" value="Drama">
-					<label for="Drama">Drama</label><br>
+					<label for="Thriller">Thriller</label>
+								<input type="radio" id="Animated" name="tvgenre" value="Animated">
+					<label for="Animated">Animated</label>
 				<input type="radio" id="Fantasy" name="tvgenre" value="Fantasy">
-					<label for="Fantasy">Fantasy</label><br>
+					<label for="Fantasy">Fantasy</label>
 				<input type="radio" id="Mystery" name="tvgenre" value="Mystery">
 					<label for="Mystery">Mystery</label><br>
 				<input type="radio" id="Documentary" name="tvgenre" value="Documentary">
-					<label for="Documentary">Documentary</label><br>
+					<label for="Documentary">Documentary</label>
 				<input type="radio" id="Sci-Fi" name="tvgenre" value="Sci-Fi">
-					<label for="Sci-Fi">Sci-Fi</label><br>
-		<label>Rating</label><br><input type="number" min="0" max="10" value="<?php echo $row['Rating']; ?>" name="tvrating"><br>
+					<label for="Sci-Fi">Sci-Fi</label>
+				<input type="radio" id="Drama" name="tvgenre" value="Drama">
+					<label for="Drama">Drama</label>
+				<input type="radio" id="Musical" name="tvgenre" value="Musical">
+					<label for="Musical">Musical</label><br>
+					</div>
+		<label class="formlabel">Rating</label><br><input type="number" min="0" max="10" value="<?php echo $row['Rating']; ?>" name="tvrating"><br>
 		<input type="submit" name="submit">
 		<a href="index.php">Back</a>
 	</form>
+	</div>
 </body>
 </html>
