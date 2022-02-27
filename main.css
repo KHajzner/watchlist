@@ -72,7 +72,7 @@ table{
 
 /*list bar*/
 .bar{
-        display: table;
+    display: table;
     background-color: #1F2833;
     text-align: center;
     text-decoration: none;
@@ -87,9 +87,43 @@ table{
 .bar a{
     margin:10px;
 }
+.contact{
+	border-top: 3px solid #66FCF1;
+    background: #1F2833 ;
+    border-radius: 15px;
+    padding: 10px;
+	width: 50%;
+	margin: 20px auto 0 auto;	
+}
 table {
   background-color: rgba(11, 12, 16, 0.5);
     margin-top: -20px;
     padding: 5px;
 }
 
+input{
+	background-color: rgba(11, 12, 16, 0.5);
+}
+
+footer a{
+    color: #3c4157;
+    margin-left: 20px;
+    margin-top:60px;
+    font-size: 10px;
+}
+footer{
+    background-color:  rgba(11, 12, 16, 1);
+    position: fixed;
+    left: 0;
+    width: 100%;
+    bottom:0;
+    display: table;
+    padding: 5px;
+    height: 10px;
+    text-align: center;
+
+}
+footer a:hover{
+    color: #222639;
+    transition: 0.5s;
+}
