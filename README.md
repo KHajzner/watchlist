@@ -13,3 +13,4 @@ If you want to run the program yourself and have any questions, don't hesitate t
 - Adding users
 - Filter form using multiple inputs at once
 - Movies/TV Shows having more than one genre assigned to them
+- Error proofing and better SQL Injefction prevention
