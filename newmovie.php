@@ -1,5 +1,6 @@
 <html>
 <head>
+<title>Add New Movie</title>
 </head>
 <body>
 <?php
