@@ -25,7 +25,7 @@ include "index.php";
     <div class="box">
         <div class="mainRow">
             <div class="column left">
-
+				<div id="allMovies">
                 <h2 id="watching">Watching</h2>
                 <table style="width:100%" class="movies">
                     <tr>
@@ -41,7 +41,7 @@ include "index.php";
 
 				<?php
 					include "database.php";
-					$q1 = "SELECT * FROM Movies WHERE watchstatus='Watching'";
+					$q1 = "SELECT * FROM Movies WHERE watchstatus='Watching' ORDER BY Title ASC";
 					$watching = $mysqli->query($q1);
 					if (mysqli_num_rows($watching)>0){
 						while($row = mysqli_fetch_array($watching)){?>
@@ -51,11 +51,11 @@ include "index.php";
                             <td><?php echo $row['Runtime'];?></td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
-                            <td><?php echo $row['Rating'];?></td>
-							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
+                            <td><?php echo $row['Rating'];?>/10</td>
+							<td><a href="editmovie.php?id=<?php echo $row['ID'];?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
-			
+
 						<?php
 						}
 				}
@@ -76,7 +76,7 @@ include "index.php";
                     </tr>
 				<?php
 								  include "database.php";
-					$q2 = "SELECT * FROM Movies WHERE watchstatus='PlanToWatch'";
+					$q2 = "SELECT * FROM Movies WHERE watchstatus='PlanToWatch' ORDER BY Title ASC";
 					$plantowatch = $mysqli->query($q2);
 					if (mysqli_num_rows($plantowatch)>0){
 						while($row = mysqli_fetch_array($plantowatch)){?>
@@ -111,7 +111,7 @@ include "index.php";
 
                   <?php
 				  include "database.php";
-					$q3 = "SELECT * FROM Movies WHERE watchstatus='Completed'";
+					$q3 = "SELECT * FROM Movies WHERE watchstatus='Completed' ORDER BY Title ASC";
 					$completed = $mysqli->query($q3);
 					if (mysqli_num_rows($completed)>0){
 						while($row = mysqli_fetch_array($completed)){?>
@@ -121,7 +121,7 @@ include "index.php";
                             <td><?php echo $row['Runtime'];?></td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
-                            <td><?php echo $row['Rating'];?></td>
+                            <td><?php echo $row['Rating'];?>/10</td>
 							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
@@ -145,7 +145,7 @@ include "index.php";
                     </tr>
 					<?php
 				  include "database.php";
-					$q4 = "SELECT * FROM Movies WHERE watchstatus='Abandoned'";
+					$q4 = "SELECT * FROM Movies WHERE watchstatus='Abandoned' ORDER BY Title ASC";
 					$abandoned = $mysqli->query($q4);
 					if (mysqli_num_rows($abandoned)>0){
 						while($row = mysqli_fetch_array($abandoned)){?>
@@ -155,7 +155,7 @@ include "index.php";
                             <td><?php echo $row['Runtime'];?></td>
 							<td><?php echo $row['Genre'];?></td>
                             <td><?php echo $row['Restriction'];?></td>
-                            <td><?php echo $row['Rating'];?></td>
+                            <td><?php echo $row['Rating'];?>/10</td>
 							<td><a href="editmovie.php?id=<?php echo $row['ID']; ?>">Edit</a></td>
 							<td><a href="deletemovie.php?id=<?php echo $row['ID']; ?>" onclick="return confirm('Are you sure you want to delete this movie?');">Delete</a></td>
                         </tr>
@@ -164,8 +164,9 @@ include "index.php";
 				}
 				$mysqli->close();
 				?>
-                </table> 
-            </div>
+                </table>
+				</div>
+			</div>
 				<div class="column right">
                 <h2>Filter By</h2>
 
