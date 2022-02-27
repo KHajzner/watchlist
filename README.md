@@ -5,7 +5,7 @@ There are also options for movies/tvshows you are watching or have abandoned. <b
 Lets you filter database based on movie's/tv show's attributes. 
 
 
-Originally run using USBWebserver. 
+Originally run using USBWebserver with externally created database. <br>
 If you want to run the program yourself and have any questions, don't hesitate to contact me.
 
 ## Future plans:
@@ -14,3 +14,4 @@ If you want to run the program yourself and have any questions, don't hesitate t
 - Filter form using multiple inputs at once
 - Movies/TV Shows having more than one genre assigned to them
 - Error proofing and better SQL Injefction prevention
+- Sort by system wwhere users can decide how the list is sorted
