@@ -2,7 +2,7 @@
 include "database.php";
 include "newmovie.php";
 
-$newTitle = $_GET["title"];
+$newTitle = addslashes($_GET["title"]);
 $newYear = $_GET["year"];
 $newRuntime = $_GET["runtime"];
 $newWatchStatus = $_GET["watchStatus"];

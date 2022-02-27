@@ -2,7 +2,7 @@
 	include('database.php');
 	$id=$_GET['id'];
  
-	$title=$_POST['title'];
+	$title=addslashes($_POST['title']);
 	$year=$_POST['year'];
 	$runtime=$_POST['runtime'];
 	$watchstatus=$_POST['watchStatus'];
