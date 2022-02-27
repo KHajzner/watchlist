@@ -118,6 +118,7 @@ table{
     padding: 5px;
     width: 100%;
     text-align: left;
+
 }
 
 tr.titles{
@@ -129,6 +130,11 @@ tr.titles{
 	font-size:15px;
 	font-weight:lighter;
 	text-transform: uppercase;
+}
+
+hr.entryline{
+	border:none;
+	border-top: 2px solid #3c4157;
 }
 
 .square{
