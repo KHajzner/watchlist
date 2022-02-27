@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Watch List</title>
     <link rel="stylesheet" href="main.css" type="text/css"/>
-	<script type="text/javascript" src="main.js"></script>
 </head>
 
 <body>
@@ -23,13 +22,23 @@
                         <a href="movies.php" class="navbar-item">
                             Movies
                         </a>
-
+						<a href="tvshows.php" class="navbar-item">
+                            TV Shows
+                        </a>
+						<a href="contact.php" class="navbar-item">
+                            Contact
+                        </a>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
 </section>
+<div id="footer">
+    <footer>
+        <small> © 2022 • Kalina Hajzner</small>
+    </footer>
+</div>
 
 </body>
 </html>
