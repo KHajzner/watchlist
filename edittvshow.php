@@ -15,10 +15,10 @@
 	<form method="POST" action="updatetvshow.php?id=<?php echo $id; ?>">
 		<label class="formlabel">Title</label><br><input type="text" value="<?php echo $row['Title']; ?>" name="tvtitle"><br>
 		<label class="formlabel">Year</label><br><input type="number" value="<?php echo $row['StartYear']; ?>" name="tvyear"><br>
-		<label class="formlabel">Current Episode:</label><br><input type="number" value="<?php echo $row['CurrentEpisode']; ?>" name="tvcep"><br>
-		<label class="formlabel">Episodes:</label><br><input type="number" value="<?php echo $row['Episodes']; ?>" name="tvallep"><br>
-		<label class="formlabel">Season:</label><br><input type="number" value="<?php echo $row['Season']; ?>" name="tvseason"><br>
-		<label for="watchStatus" class="formlabel">Watch Status:</label><br>
+		<label class="formlabel">Current Episode</label><br><input type="number" value="<?php echo $row['CurrentEpisode']; ?>" name="tvcep"><br>
+		<label class="formlabel">Episodes</label><br><input type="number" value="<?php echo $row['Episodes']; ?>" name="tvallep"><br>
+		<label class="formlabel">Season</label><br><input type="number" value="<?php echo $row['Season']; ?>" name="tvseason"><br>
+		<label for="watchStatus" class="formlabel">Watch Status</label><br>
 		<select id="watchStatus" name="tvwatchStatus">
 			<option value="completed">Completed</option>
 			<option value="watching">Watching</option>
@@ -29,11 +29,11 @@
 					<label for="genre" class="formlabel">Genre:</label><br>
 										<div class="choice"> 
 				<input type="radio" id="Romance" name="tvgenre" value="Romance" required>
-					<label for="Romance">Romance</label><br>
+					<label for="Romance">Romance</label>
 				<input type="radio" id="Comedy" name="tvgenre" value="Comedy">
-					<label for="Comedy">Comedy</label><br>
+					<label for="Comedy">Comedy</label>
 				<input type="radio" id="Horror" name="tvgenre" value="Horror">
-					<label for="Horror">Horror</label><br>
+					<label for="Horror">Horror</label>
 				<input type="radio" id="Action" name="tvgenre" value="Action">
 					<label for="Action">Action</label><br>
 				<input type="radio" id="Thriller" name="tvgenre" value="Thriller">
@@ -53,9 +53,10 @@
 				<input type="radio" id="Musical" name="tvgenre" value="Musical">
 					<label for="Musical">Musical</label><br>
 					</div>
+					<br>
 		<label class="formlabel">Rating</label><br><input type="number" min="0" max="10" value="<?php echo $row['Rating']; ?>" name="tvrating"><br>
-		<input type="submit" name="submit">
-		<a href="index.php">Back</a>
+		<input type="submit" name="submit">&nbsp;
+		<a class="second" href="tvshows.php">Back</a>
 	</form>
 	</div>
 	<div id="footer">

@@ -31,10 +31,10 @@ include "index.php";
                     <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
-                        <th style="width:10%">Runtime</th>
-						<th style="width:10%">Genre</th>
-                        <th style="width:10%">Restrictions</th>
-                        <th style="width:10%">Rating</th>
+                        <th style="width:7%">Runtime</th>
+						<th style="width:7%">Genre</th>
+                        <th style="width:9%">Restrictions</th>
+                        <th style="width:6%">Rating</th>
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
@@ -68,10 +68,10 @@ include "index.php";
                     <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
-                        <th style="width:10%">Runtime</th>
-						<th style="width:10%">Genre</th>
-                        <th style="width:10%">Restrictions</th>
-                        <th style="width:10%">Rating</th>
+                        <th style="width:7%">Runtime</th>
+						<th style="width:7%">Genre</th>
+                        <th style="width:9%">Restrictions</th>
+                        <th style="width:6%">Rating</th>
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
@@ -105,10 +105,10 @@ include "index.php";
                     <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
-                        <th style="width:10%">Runtime</th>
-						<th style="width:10%">Genre</th>
-                        <th style="width:10%">Restrictions</th>
-                        <th style="width:10%">Rating</th>
+                        <th style="width:7%">Runtime</th>
+						<th style="width:7%">Genre</th>
+                        <th style="width:9%">Restrictions</th>
+                        <th style="width:6%">Rating</th>
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
@@ -145,10 +145,10 @@ include "index.php";
                     <tr class="titles">
                         <th style="width:40%">Title</th>
                         <th style="width:10%">Release Date</th>
-                        <th style="width:10%">Runtime</th>
-						<th style="width:10%">Genre</th>
-                        <th style="width:10%">Restrictions</th>
-                        <th style="width:10%">Rating</th>
+                        <th style="width:7%">Runtime</th>
+						<th style="width:7%">Genre</th>
+                        <th style="width:9%">Restrictions</th>
+                        <th style="width:6%">Rating</th>
 						<th style="width:5%">Edit</th>
                         <th style="width:5%">Delete</th>
                     </tr>
@@ -182,74 +182,81 @@ include "index.php";
                 <h2>Filter By</h2>
 <div class="filter">
 			<form action="filtermovie.php" method="GET">
-				<label for="title">Title:</label><br>
-				<input type="text" name="title" required value="<?php if(isset($_GET['title'])){echo $_GET['title'];}?>" placeholder="Movie Title">
+				<label for="title" class="formlabel">Title</label><br>
+				<input type="text" name="title" required value="<?php if(isset($_GET['title'])){echo $_GET['title'];}?>" placeholder="Movie Title">&nbsp;
 				<button type="submit">Search</button><br>
 			</form>
 			
 			<form action="filtermovie.php" method="GET">
-					<label for="year">Release Year:</label><br>
-				<input type="number" name="year" required value="<?php if(isset($_GET['year'])){echo $_GET['year'];}?>" placeholder="Release Year"><br>
+					<label for="year" class="formlabel">Release Year</label><br>
+				<input type="number" name="year" required value="<?php if(isset($_GET['year'])){echo $_GET['year'];}?>" placeholder="Release Year">&nbsp;
+				<button type="submit">Search</button><br>
 				<input type="radio" name="time" value="after" required>
 					<label for="genre1">After</label>&nbsp;
 				<input type="radio" name="time" value="before">
 					<label for="genre2">Before</label>&nbsp;
 				<input type="radio" name="time" value="during">
 					<label for="genre3">During</label><br>
-				<button type="submit">Search</button><br>
+
 				</form>
 				
 			<form action="filtermovie.php" method="GET">
-				<label for="runtime">Runtime (in minutes):</label><br>
-				<input type="number" name="runtime" required value="<?php if(isset($_GET['runtime'])){echo $_GET['runtime'];}?>" placeholder="Runtime"><br>
+				<label for="runtime" class="formlabel">Runtime (in minutes)</label><br>
+				<input type="number" name="runtime" required value="<?php if(isset($_GET['runtime'])){echo $_GET['runtime'];}?>" placeholder="Runtime">&nbsp;
+				<button type="submit">Search</button><br>
 				<input type="radio" name="long" value="longer" required>
 					<label for="genre1">Longer</label>&nbsp;
 				<input type="radio" name="long" value="shorter">
 					<label for="genre2">Shorter</label>&nbsp;
 				<input type="radio" name="long" value="exact">
 					<label for="genre3">Exact</label><br>
-				<button type="submit">Search</button><br>
 				</form>
 				
 				
 			<form action="filtermovie.php" method="GET">
-				<label for="watchStatus">Watch Status:</label><br>
+				<label for="watchStatus" class="formlabel">Watch Status</label><br>
 				<select id="watchStatus" name="watchStatus">
 					<option value="completed">Completed</option>
 					<option value="watching">Watching</option>
 					<option value="abandoned">Abandoned</option>
 					<option value="planToWatch">Plan to Watch</option><br>
 							</select>
-					<button type="submit">Search</button><br>
+					&nbsp;<button type="submit">Search</button><br>
 			</form>
 			
 			<form action="filtermovie.php" method="GET">
-				<label for="ageRestriction">Age Restriction:</label><br>
-				<input type="text" name="ageRestriction" required value="<?php if(isset($_GET['ageRestriction'])){echo $_GET['ageRestriction'];}?>" placeholder="Age Restrictions">
-				<button type="submit">Search</button><br>
+				<label for="ageRestriction" class="formlabel">Age Restriction</label><br>
+					<select id="ageRestriction" name="ageRestriction">
+						<option value="G">G</option>
+						<option value="PG">PG</option>
+						<option value="PG-13">PG-13</option>
+						<option value="R">R</option>
+						<option value="NC-17">NC-17</option>
+						</select>
+				&nbsp;<button type="submit">Search</button><br>
 			</form>
 				
 			<form action="filtermovie.php" method="GET">
-				<label for="genre">Genre:</label><br>
-	<div class="choice"> 
+				<label for="genre" class="formlabel">Genre</label><br>
+				<div class="choice" id="filterchoice"> 
 				<input type="radio" id="Romance" name="genre" value="Romance" required>
 					<label for="Romance">Romance</label>
 				<input type="radio" id="Comedy" name="genre" value="Comedy">
 					<label for="Comedy">Comedy</label>
 				<input type="radio" id="Horror" name="genre" value="Horror">
-					<label for="Horror">Horror</label>
+					<label for="Horror">Horror</label><br>
 				<input type="radio" id="Action" name="genre" value="Action">
-					<label for="Action">Action</label><br>
+					<label for="Action">Action</label>
 				<input type="radio" id="Thriller" name="genre" value="Thriller">
 					<label for="Thriller">Thriller</label>
 				<input type="radio" id="Animated" name="genre" value="Animated">
-					<label for="Animated">Animated</label>
+					<label for="Animated">Animated</label><br>
 				<input type="radio" id="Fantasy" name="genre" value="Fantasy">
 					<label for="Fantasy">Fantasy</label>
 				<input type="radio" id="Mystery" name="genre" value="Mystery">
-					<label for="Mystery">Mystery</label><br>
+					<label for="Mystery">Mystery</label>
 				<input type="radio" id="Documentary" name="genre" value="Documentary">
-					<label for="Documentary">Documentary</label>
+					<label for="Documentary">Documentary</label><br>
 				<input type="radio" id="Sci-Fi" name="genre" value="Sci-Fi">
 					<label for="Sci-Fi">Sci-Fi</label>
 				<input type="radio" id="Drama" name="genre" value="Drama">
@@ -261,15 +268,15 @@ include "index.php";
 				</form>
 				
 			<form action="filtermovie.php" method="GET">
-				<label for="rating">Rating:</label><br>
-				<input type="number" name="rating" min="0" max="10" required value="<?php if(isset($_GET['rating'])){echo $_GET['rating'];}?>" placeholder="Rating"><br>
+				<label for="rating" class="formlabel">Rating</label><br>
+				<input type="number" name="rating" min="0" max="10" required value="<?php if(isset($_GET['rating'])){echo $_GET['rating'];}?>" placeholder="Rating">&nbsp;
+				<button type="submit">Search</button><br>
 				<input type="radio" name="qual" value="better" required>
 					<label for="genre1">Better</label>&nbsp;
 				<input type="radio" name="qual" value="worse">
 					<label for="genre2">Worse</label>&nbsp;
 				<input type="radio" name="qual" value="exact">
 					<label for="genre3">Exact</label><br>
-				<button type="submit">Search</button><br>
 			</form>
 
 </div>

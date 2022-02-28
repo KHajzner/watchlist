@@ -29,7 +29,7 @@ include "index.php";
 		</select><br>
   <label for="tvageRestriction" class="formlabel">Age Restriction:</label><br>
 	<input type="text" id="tvageRestriction" name="tvageRestriction"><br>
-		<label for="tvgenre" class="formlabel">Genre:</label><br>
+	<label for="tvgenre" class="formlabel">Genre:</label><br>
 			<div class="choice"> 
 				<input type="radio" id="Romance" name="tvgenre" value="Romance" required>
 					<label for="Romance">Romance</label>
@@ -58,7 +58,8 @@ include "index.php";
 					</div>
   <label for="tvrating" class="formlabel">Rating</label><br>
 <input type="number" id="tvrating" min="0" max="10" name="tvrating"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit">		&nbsp;
+  <a class="second" href="tvshows.php">Back</a>
   
 </form>
 

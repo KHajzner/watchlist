@@ -59,7 +59,8 @@ include "index.php";
 					</div>
   <label for="rating" class="formlabel">Rating</label><br>
 <input type="number" id="rating" min="0" max="10" name="rating"><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Submit">&nbsp;		
+  <a class="second" href="movies.php">Back</a>
 </form>
 
 </div>

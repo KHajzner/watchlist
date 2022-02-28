@@ -16,7 +16,7 @@
 		<label class="formlabel">Title</label><br><input type="text" required value="<?php echo $row['Title']; ?>" name="title"><br>
 		<label class="formlabel">Release Year</label><br><input type="number" value="<?php echo $row['Year']; ?>" name="year"><br>
 		<label class="formlabel">Runtime</label><br><input type="number" value="<?php echo $row['Runtime']; ?>" name="runtime"><br>
-		<label for="watchStatus" class="formlabel">Watch Status:</label><br>
+		<label for="watchStatus" class="formlabel">Watch Status</label><br>
 		<select id="watchStatus" name="watchStatus">
 			<option value="completed">Completed</option>
 			<option value="watching">Watching</option>
@@ -52,8 +52,8 @@
 					<label for="Musical">Musical</label><br>
 					</div>
 		<label class="formlabel">Rating</label><br><input min="0" max="10"  type="number" value="<?php echo $row['Rating']; ?>" name="rating"><br>
-		<input type="submit" name="submit">
-		<a href="index.php">Back</a>
+		<input type="submit" name="submit">&nbsp;
+		<a class="second" href="movies.php">Back</a>
 	</form>
 	</div>
 	<div id="footer">
