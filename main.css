@@ -42,6 +42,14 @@ h2{
     text-transform: uppercase;
     font-family: Calibri, monospace;
 }
+h4{
+	text-align: center;
+	color: #C5C6C7;
+	margin: 10px auto 20px auto;
+	padding: 10px 0 10px 0;
+	font-size: 30px;
+	background-color: rgba(11, 12, 16, 0.5);
+}
 .column {
     border-top: 3px solid #d4a42e;
     float: left;
@@ -98,6 +106,9 @@ h2{
 }
 .bar a{
     margin:10px;
+	color: #ad831a;
+}
+.bar a:hover{
 	color: #d4a42e;
 }
 
@@ -136,13 +147,32 @@ hr.entryline{
 	border:none;
 	border-top: 2px solid #3c4157;
 }
-
+/*general div*/
 .square{
 	border-top: 3px solid #d4a42e;
-    background: #1F2833 ;
+    background: #2c3545 ;
     padding: 10px;
 	width: 50%;
 	margin: 20px auto 0 auto;	
+}
+
+.contact{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.contact a{
+	font-size: 25px;
+}
+
+p{
+	font-size: 19px;
+	margin-top: 10
+}
+ul{
+	font-size: 19px;
+}
+strong{
+	font-size: 19px;
 }
 /*forms*/
 h3{
