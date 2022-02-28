@@ -56,5 +56,11 @@
 		<a href="index.php">Back</a>
 	</form>
 	</div>
+	<div id="footer">
+    <footer>
+        <small> © 2022 • Kalina Hajzner</small>
+    </footer>
+</div>
+
 </body>
 </html>

@@ -238,11 +238,6 @@ footer a{
 }
 footer{
     background-color:  rgba(11, 12, 16, 1);
-    position: fixed;
-    left: 0;
-    width: 100%;
-    bottom:0;
-    display: table;
     padding: 5px;
     height: 10px;
     text-align: center;

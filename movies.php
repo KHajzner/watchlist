@@ -275,5 +275,11 @@ include "index.php";
 </div>
 				</div>
 		</div>
+		<div id="footer">
+    <footer>
+        <small> © 2022 • Kalina Hajzner</small>
+    </footer>
+</div>
+
 	</body>
 </html>
