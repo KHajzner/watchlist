@@ -150,7 +150,7 @@ h3{
     font-weight: normal;
     color: #cedbf5;
     text-align: center;
-	margin:  30px auto 0 auto;
+	margin: 30px auto 0 auto;
 	font-size: 25px;
 	width: 50%;
     padding: 10px;
@@ -167,11 +167,17 @@ div#form{
 .formlabel{
 	font-size: 22px;
 	border-bottom: 2px solid #f57aeb;
+	margin-top: 20px;
+	margin-bottom: 5px;
 }
 .choice{
 	text-align: center;
 	width: 50%;
 	margin: 0 auto 0 auto;
+}
+#filterchoice{
+	width: 100%;
+	text-align: left;
 }
 select{
 	background-color: rgba(11, 12, 16, 0.40);
@@ -190,7 +196,6 @@ input{
 	color: #C5C6C7;
 	padding: 5px 10px 5px 10px;
 	margin-top: 10px;
-	margin-bottom: 15px;
 	border: 2px solid  rgba(11, 12, 16, 0.5);
 	border-radius: 4px;
 }
@@ -204,6 +209,50 @@ input[type=text]{
 input[type=number]{
 	width: 250px;
 }
+
+input[type=submit]{
+	background-color: #d4a42e;
+	font-size: 14px;
+	color: #1F2833;
+	padding: 5px 10px 5px 10px;
+	border: 2px solid  rgba(11, 12, 16,1);
+	border-radius: 7px;
+	margin-top: 5px;
+}
+input[type=submit]:hover{
+		background-color: #ad831a;
+		color: #19212b;
+		transition: 0.5s;
+		cursor: pointer;
+}
+button{
+	background-color: #d4a42e;
+	font-size: 14px;
+	color: #1F2833;
+	padding: 5px 10px 5px 10px;
+	border: 2px solid  rgba(11, 12, 16,1);
+	border-radius: 7px;
+	margin-top: 5px;
+}
+button:hover{
+		background-color: #ad831a;
+		transition: 0.5s;
+		cursor: pointer;
+}
+a.second{
+	background-color: rgba(11, 12, 16, 0.10);
+	font-size: 14px;
+	color: #C5C6C7;
+	padding: 5px 10px 5px 10px;
+	border: 2px solid #d4a42e;
+	border-radius: 7px;
+	margin-top: 5px;
+}
+a.second:hover{
+	color: #e3e6e8;
+	border: 2px solid #ad831a;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
