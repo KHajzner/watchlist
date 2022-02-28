@@ -21,12 +21,12 @@
                         </a>
 						<a href="tvshows.php" class="navbar-item">
                             TV Shows
-                        </a>
-						<a href="contact.php" class="navbar-item">
-                            Contact
                         </a>						
 						<a href="guide.php" class="navbar-item">
                             Guide
+                        </a>
+						<a href="contact.php" class="navbar-item">
+                            About
                         </a>
 
         </nav>
